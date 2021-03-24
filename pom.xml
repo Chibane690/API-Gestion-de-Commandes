@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+  <!-- ============================================== -->
+  <!-- =====Information sur projet ============ -->
+  <!-- ============================================== -->
+  
+  <!-- ============================================== -->
+  <!-- =====Information mvn boot============ -->
+  <!-- ============================================== -->
+		<parent>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-parent</artifactId>
+			<version>2.4.4</version>
+			<relativePath/> <!-- lookup parent from repository -->
+		</parent>
+  
+  <!-- ============================================== -->
+  <!-- =====Information mvn ============ -->
+  <!-- ============================================== -->
+		<groupId>org.api</groupId>
+		<artifactId>gestion</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		
+  <!-- ============================================== -->
+  <!-- =====Information générale ============ -->
+  <!-- ============================================== -->
+		<name>gestion</name>
+		<description>creation of an API for order management</description>
+		
+  <!-- ============================================== -->
+  <!-- =====Information Properties ============ -->
+  <!-- ============================================== -->
+		<properties>
+			<java.version>1.8</java.version>
+		</properties>
+		
+  <!-- ============================================== -->
+  <!-- ===================Dependencies ============ -->
+  <!-- ============================================== -->
+		<dependencies>
+		
+		         <!-- dependency starter data-jp -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+			</dependency>
+			       <!-- dependency starter web -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+			</dependency>
+	               <!-- dependency starter mysql -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<scope>runtime</scope>
+			</dependency>
+			      <!-- dependency starter lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<optional>true</optional>
+			</dependency>
+			       <!-- dependency starter test -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+			</dependency>
+			
+		</dependencies>
+
+    <!-- ============================================== -->
+    <!-- =======================Build================== -->
+    <!-- ============================================== -->
+	<build>
+		<plugins>
+		           <!-- plugin  maven-->
+			<plugin>
+			
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+				
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
